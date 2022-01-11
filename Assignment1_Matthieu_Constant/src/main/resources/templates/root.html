@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Matt's Dog Show</title>
+
+<style>
+body {
+  background-color: lightblue;
+}
+h1 {
+font-size: 50px;
+  margin:0px auto;
+  display: block;
+  text-align: center;
+}
+a{
+font-family: verdana;
+  font-size: 30px;
+  margin:0px auto;
+  display: block;
+  text-align: center;
+  color: white;
+  padding: 14px 16px;
+   
+}
+.imageone {
+ display: block;
+  float: right;
+   height: 800px;
+  width: 500px;
+}
+.imagetwo {
+ display: block;
+  float: left;
+    height: 800px;
+  width: 500px;
+}
+p {
+font-family: verdana;
+  font-size: 20px;
+  margin:0px auto;
+  text-align: center;
+}
+</style>
+
+
+
+</head>
+<body>
+<h1>Matt's Dog Show!</h1> <br> <br>
+<img class="imageone" src="dogOne.png" alt="woofer">
+<img class="imagetwo" src="dogTwo.png" alt="woofer">
+<a href="/addDog">Add Dogs</a> <br>
+<a href="/displayDogs">View Dogs</a> <br>
+<a href="/displayBreeds">View Dog Breeds</a> <br>
+<a href="/showList">View Show List</a> <br>
+<p>Welcome to Matt's dog show! A place to show off your pooch and drink publicly with friends. Please register your dog, or feel free to add a breed if yours is not apparent.</p>
+
+</body>
+</html>

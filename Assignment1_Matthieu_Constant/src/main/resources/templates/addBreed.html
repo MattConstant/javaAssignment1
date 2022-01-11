@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+
+<style>
+body {
+  background-color: lightblue;
+}
+h1 {
+  color: white;
+  text-align: center;
+   font-size: 50px;
+}
+div {
+  color: black;
+  margin:0px auto;
+  font-size: 30px;
+  font-family: verdana;
+  text-align: center;
+}
+input {
+  font-family: verdana;
+  font-size: 20px;
+  margin:0px auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+a {
+  font-family: verdana;
+  font-size: 30px;
+  text-align: center;
+  margin:0px auto;
+  padding: 10px;
+}
+.submit:hover {
+ background: darkblue;
+ display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.imageone {
+ display: block;
+  float: right;
+   height: 800px;
+  width: 500px;
+}
+.imagetwo {
+ display: block;
+  float: left;
+    height: 800px;
+  width: 500px;
+}
+.divtwo{
+  color: black;
+  margin:0px auto;
+  font-size: 10px;
+  font-family: verdana;
+  text-align: center;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+</style>
+
+
+<title>Add a breed!</title>
+</head>
+<body>
+<ul>
+<li><a href="/">Home</a> </li>
+<li><a href="/displayDogs">View Dogs</a> </li>
+<li><a href="/displayBreeds">View Dog Breeds</a> </li>
+</ul>
+
+<h1> Add a Breed!</h1>
+<img class="imageone" src="dogOne.png" alt="woofer">
+<img class="imagetwo" src="dogTwo.png" alt="woofer">
+<form action="/addBreed" method="post" th:object="${breed}">
+<div>Breed:</div>  <input type="text" th:field="*{name}"> 
+<input class="submit" type="submit" value="Submit Breed!">
+</form>
+<div class="divtwo">Add as many as you'd like</div>
+
+</body>
+</html>
